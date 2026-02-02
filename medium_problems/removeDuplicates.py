@@ -1,9 +1,10 @@
 class Solution:
     def removeDuplicates(self, nums: list[int]) -> int:
+        # Must use no extra memory for data structures; must compare to two previous
+
+
+
         
-        
-        return 0
-    
 # Given an integer array nums sorted in non-decreasing order, remove some duplicates in-place such that each 
 # unique element appears at most twice. 
 # The relative order of the elements should be kept the same.
