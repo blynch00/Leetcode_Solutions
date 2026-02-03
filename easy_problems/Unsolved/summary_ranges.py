@@ -1,27 +1,28 @@
-# You are given a sorted unique integer array nums.
-
-# A range [a,b] is the set of all integers from a to b (inclusive).
-
-# Return the smallest sorted list of ranges that cover all the numbers in the array exactly. 
-# That is, each element of nums is covered by exactly one of the ranges, 
-# and there is no integer x such that x is in one of the ranges but not in nums.
-
-# Each range [a,b] in the list should be output as:
-
-# "a->b" if a != b
-# "a" if a == b
-
+import typing
 class Solution:
     def summaryRanges(self, nums: list[int]) -> list[str]:
-        return_list = []
-        index = 0
-        # while index >= len(nums) - 1:
-           
+        if len(nums) == 0:
+            return []
+        if len(nums) == 1:
+            return [str(nums[0])]
 
+        index = 1
+        return_arr = []
+        start_string = f"{nums[0]}->"
+        print(f"start_string: {start_string}")
 
-        return return_list
+        while index != len(nums):
+            if nums[index] == nums[index - 1] + 1:
+                start_string += f"{nums[index]}->"
+            elif nums[index] == nums[index - 1]:
+                index += 1
+                continue
+            else:
+                return_arr.append(start_string)
+                start_string = ""
+            index += 1
+        return return_arr
     
-
 sol = Solution()
-nums = [0,1,2,4,5,7] # ["0->2","4->5","7"]
+nums = [1,1,2,3,4,6]
 print(sol.summaryRanges(nums))
