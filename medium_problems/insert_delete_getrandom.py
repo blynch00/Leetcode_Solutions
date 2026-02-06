@@ -40,7 +40,14 @@ class RandomizedSet:
         random_index = random.randint(0, self.count-1)
         return self.elem_list[random_index]
 # Your RandomizedSet object will be instantiated and called as such:
-# obj = RandomizedSet()
-# param_1 = obj.insert(val)
-# param_2 = obj.remove(val)
-# param_3 = obj.getRandom()
+val = 2
+val2 = 1
+obj = RandomizedSet()
+param_1 = obj.insert(val)
+param_2 = obj.insert(val2)
+print(f"{obj.elem_list}")
+param_3 = obj.getRandom()
+param_4 = obj.getRandom()
+param_5 = obj.remove(val)
+print(f"{obj.elem_list}")
+param_6 = obj.getRandom()
