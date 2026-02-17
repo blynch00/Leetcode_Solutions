@@ -1,3 +1,4 @@
+from typing import List
 class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
         # want to keep the array sorted, by starting values (we want to check sequentially)
