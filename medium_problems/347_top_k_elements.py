@@ -14,7 +14,3 @@ class Solution:
             print(count, element)
             top_elements.append(element)
         return top_elements
-
-sol = Solution()
-arr = [1,1,1,2,2,3,6,6,6,6,6,6,6,6,6,6,6,6,6,2,2,2,2,2,2]
-print(sol.topKFrequent(arr, 2))
